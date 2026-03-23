@@ -16,8 +16,7 @@ export async function POST(req: Request) {
       lensContext,
       userApiKey,
     } = body;
-    const apiKey = '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'; 
-    if (!apiKey)
+  
       return NextResponse.json({ error: 'API Key Missing' }, { status: 401 });
     const openai = new OpenAI({ apiKey });
 
